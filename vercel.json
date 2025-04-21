@@ -1,14 +1,7 @@
-# Corrigir erro: recriar pasta após reset
-os.makedirs(base_path, exist_ok=True)
 
-# Criar novamente o arquivo vercel.json
-vercel_json_path = os.path.join(base_path, "vercel.json")
-with open(vercel_json_path, "w", encoding="utf-8") as f:
-    f.write("""
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
 }
-""")
 
